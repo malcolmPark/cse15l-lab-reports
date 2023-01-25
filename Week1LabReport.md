@@ -30,7 +30,7 @@ If you are using a Windows operating system, you need to download git beforehand
 
 ### Running a few commands
 Now, we will run some commands such as cd, ls, pwd, mkdir, and cp with different ways.
-Type in a few commands for the terminal line that you have learned during class for both your own computer's VSC and for your remote lab VSC to see how they differ. In the image, you can see on the left the commands run on the linux remote labs. On the right, you can see the same commands run on my macbook computer. 
+Type in a few commands for the terminal line that you have learned during class for both your own computer's VSC and for your remote lab VSC to see how they differ. In the image, you can see on the left the commands run on the linux remote labs. On the right, you can see the same commands run on my macbook computer. - Here you can see that I ran the ls -lat command, which shows a list of all files by date.
 <img width="617" alt="Screen Shot 2023-01-16 at 9 40 22 PM" src="https://user-images.githubusercontent.com/122580137/212818765-926fb9d3-ffca-4f7f-b653-a29991382eb0.png">
 
 ## Setting up your own Github page
