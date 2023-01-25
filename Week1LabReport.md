@@ -27,7 +27,10 @@ If you are using a Windows operating system, you need to download git beforehand
 2. Once you have the terminal open, type in ssh and then put your uscd CSE lab username.ucsd.edu and that will show a message of "The authenticity of host...".
 <img width="625" alt="Screen Shot 2023-01-16 at 9 38 47 PM" src="https://user-images.githubusercontent.com/122580137/212818561-1353d3ec-38f6-4cd4-ab4d-54cbc0bd6f2a.png">
 3. Once you get this notification from VSC, type in yes and it will give you need to set a password. Then, it will show you that you are now on the remote server, which means that you are not connected to one of the computers in the CSE basement.
-4. Afterwards type in a few commands for the terminal line that you have learned during class for both your own computer's VSC and for your remote lab VSC to see how they differ.
+
+### Running a few commands
+Now, we will run some commands such as cd, ls, pwd, mkdir, and cp with different ways.
+Type in a few commands for the terminal line that you have learned during class for both your own computer's VSC and for your remote lab VSC to see how they differ. In the image, you can see on the left the commands run on the linux remote labs. On the right, you can see the same commands run on my macbook computer. 
 <img width="617" alt="Screen Shot 2023-01-16 at 9 40 22 PM" src="https://user-images.githubusercontent.com/122580137/212818765-926fb9d3-ffca-4f7f-b653-a29991382eb0.png">
 
 ## Setting up your own Github page
