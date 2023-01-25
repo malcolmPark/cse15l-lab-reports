@@ -25,7 +25,7 @@ This weeks lab report will focus on writing a blog post on github about how to r
 If you are using a Windows operating system, you need to download git beforehand.
 1. To remotely connect to the labs, first open a terminal in VSC. (You can do this by pressing Ctrl + ` or you can just find the terminal tab and make a new one.
 2. Once you have the terminal open, type in ssh and then put your uscd CSE lab username.ucsd.edu and that will show a message of "The authenticity of host...".
-<img width="625" alt="Screen Shot 2023-01-16 at 9 38 47 PM" src="https://user-images.githubusercontent.com/122580137/212818561-1353d3ec-38f6-4cd4-ab4d-54cbc0bd6f2a.png">
+- <img width="625" alt="Screen Shot 2023-01-16 at 9 38 47 PM" src="https://user-images.githubusercontent.com/122580137/212818561-1353d3ec-38f6-4cd4-ab4d-54cbc0bd6f2a.png">
 3. Once you get this notification from VSC, type in yes and it will give you need to set a password. Then, it will show you that you are now on the remote server, which means that you are not connected to one of the computers in the CSE basement.
 
 ### Running a few commands
