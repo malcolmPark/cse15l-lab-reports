@@ -91,19 +91,19 @@ added into a string array called partsOfQuery. The first element in this array w
 ## Part 2
 >The bugs that I chose from lab 3 is for the Array Methods case.
 1. A failure-inducing input for the buggy program.
-<img width="300" alt="Screen Shot 2023-01-30 at 4 49 24 PM" src="https://user-images.githubusercontent.com/122580137/215630180-4689e5fc-0b01-4e44-8e92-e9c820877c32.png">
-This failure inducing input is an array of ints, {4, 5, 6, 7}. The correct output would be {7, 6, 5, 4} but the actual output is {7, 6, 6, 7}.<br><br>
+- <img width="300" alt="Screen Shot 2023-01-30 at 4 49 24 PM" src="https://user-images.githubusercontent.com/122580137/215630180-4689e5fc-0b01-4e44-8e92-e9c820877c32.png">
+- This failure inducing input is an array of ints, {4, 5, 6, 7}. The correct output would be {7, 6, 5, 4} but the actual output is {7, 6, 6, 7}.<br><br>
 
 2. An input that doesn't induce a failure.
-<img width="300" alt="Screen Shot 2023-01-30 at 4 53 11 PM" src="https://user-images.githubusercontent.com/122580137/215630670-810d370e-8633-418f-8541-32ab5525e1fa.png">
-This is an input that doesn't induce a failure. The input is an array of ints, {3}. The correct output would be {3} which coincides with the actual output.<br><br>
+- <img width="300" alt="Screen Shot 2023-01-30 at 4 53 11 PM" src="https://user-images.githubusercontent.com/122580137/215630670-810d370e-8633-418f-8541-32ab5525e1fa.png">
+- This is an input that doesn't induce a failure. The input is an array of ints, {3}. The correct output would be {3} which coincides with the actual output.<br><br>
 
 3. The symptom of running the tests.<br>
-<img width="300" alt="Screen Shot 2023-01-30 at 4 55 42 PM" src="https://user-images.githubusercontent.com/122580137/215631061-dc574ba8-2aa5-419c-900f-fab3b929dc0b.png"><br><br>
+- <img width="300" alt="Screen Shot 2023-01-30 at 4 55 42 PM" src="https://user-images.githubusercontent.com/122580137/215631061-dc574ba8-2aa5-419c-900f-fab3b929dc0b.png"><br><br>
 
 4. The bug.
-<img width="300" alt="Screen Shot 2023-01-30 at 4 56 58 PM" src="https://user-images.githubusercontent.com/122580137/215631457-53472cef-0ba5-4d5e-b5c8-e7a23f2564ea.png">
-As it iterates through the array, only the first half of the array is successfully changed, and the second half only copies the already changed values from the first half. The second method makes the mistake of copying from the new array to the old array.<br><br>
+- <img width="300" alt="Screen Shot 2023-01-30 at 4 56 58 PM" src="https://user-images.githubusercontent.com/122580137/215631457-53472cef-0ba5-4d5e-b5c8-e7a23f2564ea.png">
+- As it iterates through the array, only the first half of the array is successfully changed, and the second half only copies the already changed values from the first half. The second method makes the mistake of copying from the new array to the old array.<br><br>
 
 
 ## Part 3
