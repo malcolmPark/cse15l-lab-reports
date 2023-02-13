@@ -104,7 +104,7 @@ added into a string array called partsOfQuery. The first element in this array w
 4. The bug.
 - Before: ![Screen Shot 2023-02-13 at 12 21 03 PM](https://user-images.githubusercontent.com/122580137/218566832-545b7d35-6565-4a02-abe1-cccc69a63724.jpeg)
 - After: <img width="300" alt="Screen Shot 2023-01-30 at 4 56 58 PM" src="https://user-images.githubusercontent.com/122580137/215631457-53472cef-0ba5-4d5e-b5c8-e7a23f2564ea.png">
-- As it iterates through the array, only the first half of the array is successfully changed, and the second half only copies the already changed values from the first half. The second method makes the mistake of copying from the new array to the old array.<br><br>
+- As it iterates through the array, only the first half of the array is successfully changed, and the second half only copies the already changed values from the first half. The second method makes the mistake of copying from the new array to the old array. The first fix addresses the issue because it makes a copy of the array firsthand and then copies the elements backwards so that the elements that are copied are not affected during the process. The second fix addresses the issue by just changing the empty array from being copied to the actual array we want copied.<br><br>
 
 
 ## Part 3
