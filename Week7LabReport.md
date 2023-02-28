@@ -49,6 +49,33 @@ This week's lab report will focus on detailing and reproducing the task from the
   Delete any existing fork of the repository. Fork the repository. Start timer!
 ### Process
   1. Login to ieng6.
-  - Open terminal and type <ssh cs15lwi23awc@ieng6.ucsd.edu>. The password will not be prompted if correctly prepared.
+  <br /> Open terminal and type <ssh cs15lwi23awc@ieng6.ucsd.edu>. The password will not be prompted if correctly prepared.
   <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221725284-75b7a9a8-9360-43f2-b283-c7ac6ad57ed8.jpeg">
   
+  2. Clone your fork of the repository from your github account.
+  <br /> Type <git clone https://github.com/malcolmPark/lab7>. The url is the link for the forked repository in your github account.
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221725774-b6553259-4e8f-4fea-9ab4-ad7b8aa66528.jpeg">
+  
+  3. Run tests and demonstrate failure.
+  <br /> Type <javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java> and then <java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests> to run the tests to demonstrate that they fail.
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221726459-cc305526-d914-4c46-9339-339569efe7b4.jpeg">
+  
+  4. Change tests to fix failure.
+  <br /> Now that we know that there is a failing text, we can type <nano ListExamples.java> to directly edit the java files from the bash script. 
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221727135-69a05cda-4dff-4cac-8f23-ac335b3c8cf7.jpeg">
+  <br /> We can use the arrow key to move down where the error is, but scrolling down is much faster. After we get to the correct line, type <right> 12 times to get to the text we need to change. Replace the "1" to "2" so that it changes from "index1" to "index2".
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221727443-528c24c5-4d3e-4b17-b4a0-f2815b5cf0ab.jpeg">
+  <br /> When we are done changing the test, type <^o> ctrl o to save the changes and type <^x> ctrl x to exit back to the terminal.
+  
+  5. Run the tests again to demonstrate success.
+  <br /> Type <javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java> and then <java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests> to run the tests to demonstrate that they now succeed. Or, now that we have the command in the search history, we can use the up arrow <up> three times to compile and two times to run the tests.
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221728242-4d0c0b28-d3f9-45bf-ae88-8c9ec0331f04.jpeg">
+  
+  6. Commit and push
+  <br /> Now that we have everything fixed, we are ready to commit and push the changes to our github account. We will do so by first typing <git add .> which adds all the java files we intend to commit and push. Then, we type <git commit -m "Changes"> and then <git push>.
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221729085-c57f7ffd-606e-4e05-bac1-dbc221c80a56.jpeg">
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221729240-9741711a-0da4-4222-895f-f6538a21ebc8.jpeg">
+
+
+  
+
