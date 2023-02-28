@@ -12,7 +12,7 @@ grep -l : This command will display the name of the files that match a string
 ```
 
 ### grep -c
-- <img width="300" alt="First use of grep -c" src="https://user-images.githubusercontent.com/122580137/218574536-50f7f247-6ef2-4a4d-9c90-784a2c1ed331.jpeg">
+- <img width="300" alt="First use of grep -c" src="https://user-images.githubusercontent.com/122580137/221717237-a591b903-b924-4d95-a466-8cedaf4f8e38.jpeg">
 - This first use of grep -c shows that the word "and" appears in 8 lines in the text file HandRLosAngeles. This is useful because it doesn't fill up your screen with all the texts that the string appears in, making it easier for programmers to notice.
 - <img width="300" alt="Second use of grep -c" src="https://user-images.githubusercontent.com/122580137/218573392-0c4b77e9-80be-4074-bd0f-af3fce9cacb2.jpeg">
 - This second use of grep -c is combined with the -r command that recursively searches the directory. Therefore, it shows all files in the travel_guides directory and shows the number of lines with the matching string of "asia". This is technically more useful than the original grep -c command since it is recursive and you can apply it over a general directory.
