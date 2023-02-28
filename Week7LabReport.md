@@ -45,6 +45,10 @@ This week's lab report will focus on detailing and reproducing the task from the
 > This section will now cover the actual lab challenge.
 > Time yourself!
 
-### Logging into ieng6
+### Setups
+  Delete any existing fork of the repository. Fork the repository. Start timer!
+### Process
+  1. Login to ieng6.
+  - Open terminal and type <ssh cs15lwi23awc@ieng6.ucsd.edu>. The password will not be prompted if correctly prepared.
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221725284-75b7a9a8-9360-43f2-b283-c7ac6ad57ed8.jpeg">
   
-
