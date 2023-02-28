@@ -6,7 +6,7 @@ This week's lab report will focus on detailing and reproducing the task from the
 > This is not a part of the timed challenge, but preparations for that portion of the lab challenge.
 
 1. Generating SSH Keys for ieng6
-- First, we will open our terminal using visual studio code. Then, we will run <ssh-keygen>. After doing so, we will keep pressing <Enter> until we see a text called "randomart image".
+- First, we will open our terminal using visual studio code. Then, we will run `<ssh-keygen>`. After doing so, we will keep pressing <Enter> until we see a text called "randomart image".
   <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221719699-a389c77d-09ae-401c-9071-56547a1a3350.jpeg">
 - Then, we will login to our remote course specific account on ieng6.
   <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221720291-dc954a32-6d0a-4900-85b7-a0f3d45f52b6.jpeg"> 
