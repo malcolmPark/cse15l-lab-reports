@@ -18,14 +18,14 @@ This week's lab report will focus on detailing and reproducing the task from the
 2. Generating SSH Keys for Github
 - We will be creating a new private SSH key in ieng6 for accessing Github from our remote access accounts.
 - Firstly, login to ieng6 and run the command <ssh-keygen>, pressing <Enter> again till we get the "randomart image".
-  <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221722652-a7040ed3-1f4b-4318-b62b-45ba6b22d7a0.jpeg">
-  <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221722654-966534c8-ad0d-46c6-bba1-8a74a625b0dc.jpeg">
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221722652-a7040ed3-1f4b-4318-b62b-45ba6b22d7a0.jpeg">
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221722654-966534c8-ad0d-46c6-bba1-8a74a625b0dc.jpeg">
 - Afterwards, we will add the public key to our Github account, by first displaying the SSH public key by using <cat> through typing <cat /home/linux/ieng6/cs15lwi23/cs15lwi23awc/.ssh/id_rsa.pub>. The public key should be different per user.
-  <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221723007-0b619d2c-1197-430e-89e2-274a6cd6a0b4.jpeg">
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221723007-0b619d2c-1197-430e-89e2-274a6cd6a0b4.jpeg">
 - We will then open our Github account through a browser, go to the settings, and click SSH and GPG keys in the "Access" section. Then we will add in a new SSH key with the title "Malcolm's ieng6 machine" and the key type with "Authentication Key" and type in the output of the <cat> command into the key field.
-  <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221723629-b20154e9-38a1-4094-8f8d-d90f63978331.jpeg">
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221723629-b20154e9-38a1-4094-8f8d-d90f63978331.jpeg">
 - Then, we will return to our ieng6 terminal and run <ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts> to add github.com as a recognized host to prevent further yes/no questions. To confirm that this was successfully done, we can run <ssh -T git@github.com> to verify.
-  <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221724106-1558678d-3fed-46c1-b957-157a61e890dc.jpeg">
+  <br /> <img width="300" alt="Screen Shot 2023-01-12 at 5 38 38 PM" src="https://user-images.githubusercontent.com/122580137/221724106-1558678d-3fed-46c1-b957-157a61e890dc.jpeg">
 
   
   
