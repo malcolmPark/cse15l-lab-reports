@@ -54,7 +54,8 @@ The three methods are shown below.
 | <img width="300" alt="FFFMTN" src="https://user-images.githubusercontent.com/122580137/224853075-d0b90ea2-5201-46b0-93bd-50dbc6c8c379.jpeg"> | <img width="300" alt="FFFMTY" src="https://user-images.githubusercontent.com/122580137/224853078-0e197ae9-9f6f-446d-a50c-8d4d78c79f29.jpeg"> |
 
 #### Using jdb to set a breakpoint.
-- We can see that running the tests show that we have the error in line 14 of the test.
+- We can see that running the tests show that we have the error in line 9 of the test.
+- <img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224882097-bc7dfc1a-04c7-4022-98b9-3d32b670657d.png">
 - Based on the information, we can identify that the root problem from ArrayExamples is that the method copies from itself as it is changing, thus only changing half of the array correctly.
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224877859-69b8aabf-0743-4bde-b403-9c644366fd3d.png">
@@ -71,6 +72,7 @@ The three methods are shown below.
 
 #### Using jdb to set a breakpoint.
 - We can see that running the tests show that we have the error in line 16 of the test.
+- <img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224882203-fb88a4bc-2ace-4833-a8d9-280ae6fdf8b2.png">
 - Based on the information, we can identify that the root problem from ArrayExamples is that the method copies from the new empty copy of the array to the actual array we want to copy from. Just changing the location of these two arrays will correct the error.
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224877896-92eba57a-9e7a-48ec-bff2-5007908c82a2.png">
@@ -88,6 +90,7 @@ The three methods are shown below.
 
 #### Using jdb to set a breakpoint.
 - We can see that running the tests show that we have the error in line 21 of the test.
+- <img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224882309-2cc75b34-60cd-4f86-b07a-68e21304e377.png">
 - Based on the information, we can identify the root problem from ArrayExamples is that the method excludes all of the lowest numbers (if there are duplicate lowest numbers). We can fix this issue by changing the method so that the lowest number is only taken once from the sum.
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224877944-d765ed70-59cc-4c71-9e2c-0b0cf81dbcc7.png">
@@ -149,10 +152,10 @@ The two methods are shown below.
 
 #### Using jdb to set a breakpoint.
 - We can see that running the tests show that we have the error in line 31 of the test.
-- Based on the information, we can identify the root problem from ListExamples is that the method continues to copy the element to the first index (index 0) of the new array. This will ultimately reverse the array. Switching the index from 0 to -1 will enable the elements to properly be copied.
+- <img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224881982-447723ce-dd14-4b33-b2ba-962783b60e8a.png">
+- Based on the information, we can identify the root problem from ListExamples is that the method continues to copy the element to the first index (index 0) of the new ArrayList. This will ultimately reverse the array. Switching the index from 0 to result.size() will enable the elements to properly be copied to the end of the ArrayList for each iteration.
 
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224878242-98b033ab-6f49-4e50-9da3-04e5e450ca8d.png">
-
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224880646-a595af10-ea06-4225-81c8-c3a5bdf563c8.png">
 
 ### Testing Second Method
 > The second method is supposed to change and return the inputted array in reverse order, with a different new array.
@@ -166,6 +169,7 @@ The two methods are shown below.
 
 #### Using jdb to set a breakpoint.
 - We can see that running the tests show that we have the error in line 31 of the test.
+- <img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224881871-3446c2bd-ff5a-4294-ba48-4e74278b1832.png">
 - Based on the information, we can identify the root problem from ListExamples is that the method added to the variable for the index of the first list when in fact it should be increasing the variable for the index of the second list.
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224878490-9c7d4d20-d02f-45ba-8170-919fb2990b2c.png">
