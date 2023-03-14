@@ -54,8 +54,10 @@ The three methods are shown below.
 | <img width="300" alt="FFFMTN" src="https://user-images.githubusercontent.com/122580137/224853075-d0b90ea2-5201-46b0-93bd-50dbc6c8c379.jpeg"> | <img width="300" alt="FFFMTY" src="https://user-images.githubusercontent.com/122580137/224853078-0e197ae9-9f6f-446d-a50c-8d4d78c79f29.jpeg"> |
 
 #### Using jdb to set a breakpoint.
-- We can see that running the tests show that we have the error in line 9 of the test.
-- 
+- We can see that running the tests show that we have the error in line 14 of the test.
+- Based on the information, we can identify that the root problem from ArrayExamples is that the method copies from itself as it is changing, thus only changing half of the array correctly.
+
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224877859-69b8aabf-0743-4bde-b403-9c644366fd3d.png">
 
 ### Testing Second Method
 > The second method is supposed to change and return the inputted array in reverse order, with a different new array.
@@ -69,6 +71,9 @@ The three methods are shown below.
 
 #### Using jdb to set a breakpoint.
 - We can see that running the tests show that we have the error in line 16 of the test.
+- Based on the information, we can identify that the root problem from ArrayExamples is that the method copies from the new empty copy of the array to the actual array we want to copy from. Just changing the location of these two arrays will correct the error.
+
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224877896-92eba57a-9e7a-48ec-bff2-5007908c82a2.png">
 
 ### Testing Third Method
 > The third method is supposed to average the numbers in an array but leaves out the lowest
@@ -83,7 +88,9 @@ The three methods are shown below.
 
 #### Using jdb to set a breakpoint.
 - We can see that running the tests show that we have the error in line 21 of the test.
+- Based on the information, we can identify the root problem from ArrayExamples is that the method excludes all of the lowest numbers (if there are duplicate lowest numbers). We can fix this issue by changing the method so that the lowest number is only taken once from the sum.
 
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224877944-d765ed70-59cc-4c71-9e2c-0b0cf81dbcc7.png">
 
 ## Part 2 - ListExamples.java
 The raw Java code for ListExamples.java has a bug in all of the methods. 
@@ -141,8 +148,11 @@ The two methods are shown below.
 | <img width="300" alt="SFFMTN" src="https://user-images.githubusercontent.com/122580137/224869977-e2a62c44-f673-455d-8bc5-cba94a7d4ba7.jpeg"> | <img width="300" alt="SFFMTY" src="https://user-images.githubusercontent.com/122580137/224869771-0ca81d81-ba5b-48e1-851c-9282f3d41ab3.jpeg"> |
 
 #### Using jdb to set a breakpoint.
-- We can see that running the tests show that we have the error in line 9 of the test.
-- 
+- We can see that running the tests show that we have the error in line 31 of the test.
+- Based on the information, we can identify the root problem from ListExamples is that the method continues to copy the element to the first index (index 0) of the new array. This will ultimately reverse the array. Switching the index from 0 to -1 will enable the elements to properly be copied.
+
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224878242-98b033ab-6f49-4e50-9da3-04e5e450ca8d.png">
+
 
 ### Testing Second Method
 > The second method is supposed to change and return the inputted array in reverse order, with a different new array.
@@ -155,4 +165,8 @@ The two methods are shown below.
 | <img width="300" alt="SFSMTN" src="https://user-images.githubusercontent.com/122580137/224869977-e2a62c44-f673-455d-8bc5-cba94a7d4ba7.jpeg"> | <img width="300" alt="SFSMTY" src="https://user-images.githubusercontent.com/122580137/224869773-4006d9bf-09d6-47b3-9566-d7b0679719ca.jpeg"> |
 
 #### Using jdb to set a breakpoint.
-- We can see that running the tests show that we have the error in line 16 of the test.
+- We can see that running the tests show that we have the error in line 31 of the test.
+- Based on the information, we can identify the root problem from ListExamples is that the method added to the variable for the index of the first list when in fact it should be increasing the variable for the index of the second list.
+
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/122580137/224878490-9c7d4d20-d02f-45ba-8170-919fb2990b2c.png">
+
