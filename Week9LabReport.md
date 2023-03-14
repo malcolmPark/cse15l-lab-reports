@@ -48,70 +48,41 @@ The three methods are shown below.
 > If we run a test with a singular number, the input does NOT induce a failure.
 > However, if we run a test with a list with at least two indices, there is an error.
 
-![FFFMN](https://user-images.githubusercontent.com/122580137/224846253-3c169a36-6a2d-4768-8039-757c807b203a.jpeg)
-![FFFMY](https://user-images.githubusercontent.com/122580137/224846274-42a9ce57-fd1b-4c86-9c08-d8db9c8a7bc9.jpeg)
+| Testing with no failure | Testing with failure |
+|---|---|
+| <img width="300" alt="FFFMN" src="https://user-images.githubusercontent.com/122580137/224846253-3c169a36-6a2d-4768-8039-757c807b203a.jpeg"> | <img width="300" alt="FFFMY" src="https://user-images.githubusercontent.com/122580137/224846274-42a9ce57-fd1b-4c86-9c08-d8db9c8a7bc9.jpeg"> |
+| <img width="300" alt="FFFMTN" src="https://user-images.githubusercontent.com/122580137/224853075-d0b90ea2-5201-46b0-93bd-50dbc6c8c379.jpeg"> | <img width="300" alt="FFFMTY" src="https://user-images.githubusercontent.com/122580137/224853078-0e197ae9-9f6f-446d-a50c-8d4d78c79f29.jpeg"> |
+
+#### Using jdb to set a breakpoint.
+- We can see that running the tests show that we have the error in line 9 of the test.
+- 
+
+### Testing Second Method
+> The second method is supposed to change and return the inputted array in reverse order, with a different new array.
+> If we run a test with an empty array, the input does NOT induce a failure.
+> However, if we run a test with a list with at least one index, there is an error.
+
+| Testing with no failure | Testing with failure |
+|---|---|
+| <img width="300" alt="FFSMN" src="https://user-images.githubusercontent.com/122580137/224857666-2b9586d7-2077-4636-88e8-282f6858bd6d.jpeg"> | <img width="300" alt="FFSMY" src="https://user-images.githubusercontent.com/122580137/224857668-eb2bc518-7392-4855-843a-c8df6349d6b0.jpeg"> |
+| <img width="300" alt="FFSMTN" src="https://user-images.githubusercontent.com/122580137/224857874-9af0ee6d-55da-4f88-8bfa-137248579afa.jpeg"> | <img width="300" alt="FFSMTY" src="https://user-images.githubusercontent.com/122580137/224857877-50ff05ad-07eb-4fad-aac2-6e771e96a63b.jpeg"> |
+
+#### Using jdb to set a breakpoint.
+- We can see that running the tests show that we have the error in line 16 of the test.
+
+### Testing Third Method
+> The third method is supposed to average the numbers in an array but leaves out the lowest
+> number in the array when it calculates the mean. If its an empty array or just one index, it will return 0.
+> If we run a test with a singular number, the input does NOT induce a failure.
+> However, if we run a test with a list with at least two indices, there is an error.
+
+| Testing with no failure | Testing with failure |
+|---|---|
+| <img width="300" alt="FFTMN" src="https://user-images.githubusercontent.com/122580137/224860813-1f4a2f94-4727-4598-bd9c-cb1fbcdfd3a1.jpeg"> | <img width="300" alt="FFTMY" src="https://user-images.githubusercontent.com/122580137/224860817-15ad5639-dc63-4de2-bc19-563fc8ee5e4d.jpeg"> |
+| <img width="300" alt="FFTMTN" src="https://user-images.githubusercontent.com/122580137/224861063-21d7b6f1-ca29-41f1-a0b0-11c6b0540dc6.jpeg"> | <img width="300" alt="FFTMTY" src="https://user-images.githubusercontent.com/122580137/224861062-60a1442e-dc90-4d7d-9272-5ebda2be4d67.jpeg"> |
+
+#### Using jdb to set a breakpoint.
+- We can see that running the tests show that we have the error in line 21 of the test.
 
 
-1. First loading the server to localhost:4000.
-- <img width="300" alt="Screen Shot 2023-01-30 at 3 55 09 PM" src="https://user-images.githubusercontent.com/122580137/215623544-7e09227c-7ba9-40d5-b783-9191a4c896b8.png">
-- This screenshot shows what happens when we first load the server. Only the words "Current String:" appear because we haven't
-appended anything to the string instance variable yet.
-2. Using `/add-message?s=Hello, my name is Malcolm`.
-- <img width="300" alt="Screen Shot 2023-01-30 at 3 57 33 PM" src="https://user-images.githubusercontent.com/122580137/215623798-b32c2245-e3fd-4540-ba6d-122d6330add3.png">
-- When we add the string value "Hello, my name is Malcolm", we see "Statement appended!".
-- Now, if we move back to the starting url (http://localhost:4000/) we see that the instance variable has changed.
-- <img width="300" alt="Screen Shot 2023-01-30 at 3 59 57 PM" src="https://user-images.githubusercontent.com/122580137/215624128-88999a69-9cd6-4f27-b09b-54dda4c9df6a.png">
-3. Using `/add-message?s=I love to code in Java! I wonder what your favorite language is?`.
-- Lets see if this works if we append a longer string as well.
-- <img width="300" alt="Screen Shot 2023-01-30 at 4 04 00 PM" src="https://user-images.githubusercontent.com/122580137/215624587-ca157608-b12a-4963-90c6-1591832e7b72.png">
-- When we add the string value "I love to code in Java! I wonder what your favorite language is?", we again see
-"Statement appended!".
-- Now if we move back to the starting url again (http://localhost:4000/) we see that the instance variable has changed.
-- <img width="300" alt="Screen Shot 2023-01-30 at 4 05 32 PM" src="https://user-images.githubusercontent.com/122580137/215624744-4c74e829-fbbe-4611-9c14-5c214f6c29bb.png">
-4. Using `/add-message?s=`
-- This will show an edge case that represents a situation where we leave the appending message section blank.
-- <img width="300" alt="image" src="https://user-images.githubusercontent.com/122580137/215628224-7c17eb69-aa64-4eba-a006-9551b58794a9.png">
-- In this case, it returns "Message not filled" and indicates that the message section of the query is empty. It does not append
-anything in this situation.
 
-
-### Explanation of each screenshot
-For both screenshots, the main method creates a URLHandler that manages the string instance variable, and then uses Server.java file
-that we used in the lab of Week 2 to start a web server.
-1. For the first and second screenshot, when we first load the server we call the method handleRequest. When we load the server, the 
-if, else if, and else statements are run to append string values appropriately at the right condtions. The parameter for this
-method is the url itself. By running the url of "localhost:4000/add-message?s=Hello, my name is Malcolm" and
-"localhost:4000/add-message?s=I love to code in Java! I wonder what your favorite language is?", the method checks if the 
-words "add-message" is contained in the url. If there is, the query of the url is split by the = sign, and the elements are 
-added into a string array called partsOfQuery. The first element in this array will be "s", and the second element will be
- "Hello, my name is Malcolm", which is then appended to the instance variable statement with a new line (\n).
-
-2. For the third screenshot, it is still the same when we first load the server, we call the method handleRequest. Since there,
- are the words "add-message", it will still pass on to the else if statement, but since the string array partsOfQuery will only
- have a length of one, it returns the statement "Message not filled" and the instance variable is not changed.
-
-## Part 2
->The bugs that I chose from lab 3 is for the Array Methods case.
-1. A failure-inducing input for the buggy program.
-- <img width="300" alt="Screen Shot 2023-01-30 at 4 49 24 PM" src="https://user-images.githubusercontent.com/122580137/215630180-4689e5fc-0b01-4e44-8e92-e9c820877c32.png">
-- This failure inducing input is an array of ints, {4, 5, 6, 7}. The correct output would be {7, 6, 5, 4} but the actual output is {7, 6, 6, 7}.<br><br>
-
-2. An input that doesn't induce a failure.
-- <img width="300" alt="Screen Shot 2023-01-30 at 4 53 11 PM" src="https://user-images.githubusercontent.com/122580137/215630670-810d370e-8633-418f-8541-32ab5525e1fa.png">
-- This is an input that doesn't induce a failure. The input is an array of ints, {3}. The correct output would be {3} which coincides with the actual output.<br><br>
-
-3. The symptom of running the tests.<br>
-- <img width="300" alt="Screen Shot 2023-01-30 at 4 55 42 PM" src="https://user-images.githubusercontent.com/122580137/215631061-dc574ba8-2aa5-419c-900f-fab3b929dc0b.png"><br><br>
-
-4. The bug.
-- Before: ![Screen Shot 2023-02-13 at 12 21 03 PM](https://user-images.githubusercontent.com/122580137/218566832-545b7d35-6565-4a02-abe1-cccc69a63724.jpeg)
-- After: <img width="300" alt="Screen Shot 2023-01-30 at 4 56 58 PM" src="https://user-images.githubusercontent.com/122580137/215631457-53472cef-0ba5-4d5e-b5c8-e7a23f2564ea.png">
-- As it iterates through the array, only the first half of the array is successfully changed, and the second half only copies the already changed values from the first half. The second method makes the mistake of copying from the new array to the old array. The first fix addresses the issue because it makes a copy of the array firsthand and then copies the elements backwards so that the elements that are copied are not affected during the process. The second fix addresses the issue by just changing the empty array from being copied to the actual array we want copied.<br><br>
-
-
-## Part 3
-This part of the md file is to explain new terms and ideas I learned during the past weeks.
-Though I always had a slim idea of what Symptoms, Bugs, and Failure-Inducing Inputs were, I 
-learned what they actually meant in the CSE 15L class. It was also honestly very surprising 
-to learn that errors do not necessarily mean bugs if the error message was intended from the 
-start.
