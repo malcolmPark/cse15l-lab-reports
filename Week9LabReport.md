@@ -85,4 +85,74 @@ The three methods are shown below.
 - We can see that running the tests show that we have the error in line 21 of the test.
 
 
+## Part 2 - ListExamples.java
+The raw Java code for ListExamples.java has a bug in all of the methods. 
+The two methods are shown below.
+```
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, s);
+      }
+    }
+    return result;
+  }
+  
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index1 += 1;
+    }
+    return result;
+  }
 
+```
+
+### Testing First Method
+> The first method is supposed to return a new ArrayList that has all the elements of the input ArrayList that returns true with the StringChecker.
+> If we run the test with an empty list, the input does NOT induce a failure.
+> However, if we run a test with a list with at least two indices, it does induce a failure.
+
+| Testing with no failure | Testing with failure |
+|---|---|
+| <img width="300" alt="SFFMN" src="https://user-images.githubusercontent.com/122580137/224868919-9f6622ba-d3bc-438f-994f-80157e3b0ad9.jpeg"> | <img width="300" alt="SFFMY" src="https://user-images.githubusercontent.com/122580137/224868922-dc5f3c3e-bc15-48ac-a503-216a1f64d6e6.jpeg"> |
+| <img width="300" alt="SFFMTN" src="https://user-images.githubusercontent.com/122580137/224869977-e2a62c44-f673-455d-8bc5-cba94a7d4ba7.jpeg"> | <img width="300" alt="SFFMTY" src="https://user-images.githubusercontent.com/122580137/224869771-0ca81d81-ba5b-48e1-851c-9282f3d41ab3.jpeg"> |
+
+#### Using jdb to set a breakpoint.
+- We can see that running the tests show that we have the error in line 9 of the test.
+- 
+
+### Testing Second Method
+> The second method is supposed to change and return the inputted array in reverse order, with a different new array.
+> If we run a test with an empty array, the input does NOT induce a failure.
+> However, if we run a test with a list with at least one index, there is an error.
+
+| Testing with no failure | Testing with failure |
+|---|---|
+| <img width="300" alt="SFSMN" src="https://user-images.githubusercontent.com/122580137/224868920-544f20d7-5501-4079-bfe7-fd073f6736c9.jpeg"> | <img width="300" alt="SFSMY" src="https://user-images.githubusercontent.com/122580137/224868923-033b8e9d-9415-48a5-b9c8-f2536517624b.jpeg"> |
+| <img width="300" alt="SFSMTN" src="https://user-images.githubusercontent.com/122580137/224869977-e2a62c44-f673-455d-8bc5-cba94a7d4ba7.jpeg"> | <img width="300" alt="SFSMTY" src="https://user-images.githubusercontent.com/122580137/224869773-4006d9bf-09d6-47b3-9566-d7b0679719ca.jpeg"> |
+
+#### Using jdb to set a breakpoint.
+- We can see that running the tests show that we have the error in line 16 of the test.
